@@ -13,7 +13,7 @@ namespace TaskManagement.Brokers
             return Console.ReadLine()!;
         }
 
-        public int GetUserValueByMassageForId(string text)
+        public int GetUserValueByMassageForNumber(string text)
         {
             Console.Write(text);
             return int.Parse(Console.ReadLine()!);
