@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskManagement.Brokers;
 using Local = TaskManagement.Models;
 
 namespace TaskManagement.Managers
@@ -16,7 +15,6 @@ namespace TaskManagement.Managers
     internal partial class TaskManager
     {
         private List<Local.Task> tasks = new List<Local.Task>();
-        ValueManipulator valueManipulator = new ValueManipulator();
 
         public void ViewTasks()
         {
