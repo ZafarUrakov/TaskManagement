@@ -9,43 +9,57 @@ namespace TaskManagement.Managers
     {
         public void UpdateTask()
         {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("Enter the Id of the task to update: ");
-            if (int.TryParse(Console.ReadLine()!, out int id))
+            if (tasks.Count > 0)
             {
-                var taskToUpdate = tasks.FirstOrDefault(t => t.Id == id);
-                if (taskToUpdate != null)
+                Console.Clear();
+                Console.WriteLine("Loading...");
+                Thread.Sleep(2000);
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Enter the Id of the task to update: ");
+                if (int.TryParse(Console.ReadLine()!, out int id))
                 {
-                    Action<bool> updateTaskCompletion = isCompleted => taskToUpdate.IsCompleted = isCompleted;
-
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("Is the task completed? (true/false): ");
-                    if (bool.TryParse(Console.ReadLine(), out bool isComleted))
+                    var taskToUpdate = tasks.FirstOrDefault(t => t.Id == id); // LINQ method(FirstOrDefault)
+                    if (taskToUpdate != null)
                     {
-                        updateTaskCompletion(isComleted);
+                        Action<bool> updateTaskCompletion = isCompleted => taskToUpdate.IsCompleted = isCompleted; // Delegat
+
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Task updated successfully.");
-                        Console.ResetColor();
+                        Console.Write("Is the task completed? (true/false): ");
+                        if (bool.TryParse(Console.ReadLine(), out bool isComleted))
+                        {
+                            Console.WriteLine("Loading...");
+                            Thread.Sleep(2000);
+                            updateTaskCompletion(isComleted);
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Task updated successfully.");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Invalid input. Task not updated.");
+                            Console.ResetColor();
+                        }
                     }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Invalid input. Task not updated.");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Task not found.");
                         Console.ResetColor();
                     }
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("Task not found.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid input. Please enter a valid task Id.");
                     Console.ResetColor();
                 }
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Invalid input. Please enter a valid task Id.");
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("Sorry, but you have not added tasks yet. Add at least one!");
                 Console.ResetColor();
             }
         }
