@@ -8,7 +8,7 @@ using Local = TaskManagement.Models;
 
 namespace TaskManagement.Managers
 {
-    internal partial class TaskManager : ITaskManager
+    public partial class TaskManager : ITaskManager
     {
         private List<Local.Task> tasks = new List<Local.Task>();
         ValueManipulator valueManipulator = new ValueManipulator();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskManagement.Managers
 {
-    internal interface ITaskManager
+    public interface ITaskManager
     {
         public void ViewTasks();
         public void AddTask();
