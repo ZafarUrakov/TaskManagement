@@ -27,7 +27,9 @@ namespace TaskManagement
                     case 2:
                         taskManager.AddTask(); break;
                     case 3:
-                        taskManager.UpdateTask();break;
+                        taskManager.UpdateTask(); break;
+                    case 4:
+                        taskManager.DeleteTask(); break;
                     case 5:
                         Console.WriteLine("Goodbye!");
                         return;
