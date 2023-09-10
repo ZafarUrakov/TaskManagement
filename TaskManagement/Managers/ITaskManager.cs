@@ -8,7 +8,7 @@ namespace TaskManagement.Managers
 {
     public interface ITaskManager
     {
-        public void ViewTasks();
-        public void AddTask();
+        void ViewTasks();
+        void AddTask();
     }
 }
