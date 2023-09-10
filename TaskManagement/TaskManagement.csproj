@@ -7,12 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Managers\TaskManager.Add.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Managers\TaskManager.Add.cs" />
-  </ItemGroup>
-
 </Project>
