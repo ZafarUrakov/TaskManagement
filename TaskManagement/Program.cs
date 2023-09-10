@@ -20,14 +20,14 @@ namespace TaskManagement
             {
                 int menuSelection = report.ShowMenu();
 
-                switch(menuSelection)
+                switch (menuSelection)
                 {
                     case 1:
                         taskManager.ViewTasks(); break;
                     case 2:
                         taskManager.AddTask(); break;
                     case 3:
-                         break;
+                        break;
                     case 5:
                         Console.WriteLine("Goodbye!");
                         return;
