@@ -8,7 +8,7 @@ using Local = TaskManagement.Models;
 
 namespace TaskManagement.Managers
 {
-    internal partial class TaskManager
+    public partial class TaskManager
     {
         private List<Local.Task> tasks = new List<Local.Task>();
         ValueManipulator valueManipulator = new ValueManipulator();
@@ -17,7 +17,7 @@ namespace TaskManagement.Managers
         {
             Console.Clear();
             Console.WriteLine("Tasks:");
-            foreach(var task in tasks)
+            foreach (var task in tasks)
             {
                 Console.WriteLine($"ID: {task.Id}, Title: {task.Title}, " +
                     $"DueData: {task.DueDate}, Completed: {task.IsCompleted}");

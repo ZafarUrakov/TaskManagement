@@ -3,16 +3,11 @@
 // Putting Tasks In Order 
 // --------------------------------------------------------;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Local = TaskManagement.Models;
 
 namespace TaskManagement.Managers
 {
-    internal partial class TaskManager : ITaskManager
+    public partial class TaskManager
     {
         public void AddTask()
         {
@@ -23,7 +18,7 @@ namespace TaskManagement.Managers
             task.Title = valueManipulator.GetUserValueByMassage("Enter task title: ");
             task.Description = valueManipulator.GetUserValueByMassage("Enter task description: ");
             Console.Write("Enter due date (yyyy-mm-dd): ");
-            if(DateTime.TryParse(Console.ReadLine(), out DateTime dueDate)) // attempting to convert a string a date format
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime dueDate)) // attempting to convert a string a date format
             {
                 task.DueDate = dueDate;
             }
