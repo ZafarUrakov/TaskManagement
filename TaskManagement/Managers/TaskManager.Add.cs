@@ -12,7 +12,7 @@ using Local = TaskManagement.Models;
 
 namespace TaskManagement.Managers
 {
-    internal partial class TaskManager
+    internal partial class TaskManager : ITaskManager
     {
         public void AddTask()
         {
