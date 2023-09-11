@@ -38,7 +38,6 @@ namespace TaskManagement
                         Console.WriteLine("Invalid input. Please select a valid option.");
                         break;
                 }
-
             }
         }
     }
