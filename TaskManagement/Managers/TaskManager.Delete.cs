@@ -14,7 +14,6 @@ namespace TaskManagement.Managers
                 Console.Clear();
                 Console.WriteLine("Loading...");
                 Thread.Sleep(2000);
-                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write("Enter the Id of the task to delete: ");
                 if (int.TryParse(Console.ReadLine()!, out int id))
                 {
@@ -22,9 +21,7 @@ namespace TaskManagement.Managers
                     if (taskToDelete != null)
                     {
                         tasks.RemoveTask(taskToDelete);
-                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Task deleted successfully.");
-                        Console.ResetColor();
                     }
                     else
                     {

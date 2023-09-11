@@ -14,7 +14,6 @@ namespace TaskManagement.Managers
                 Console.Clear();
                 Console.WriteLine("Loading...");
                 Thread.Sleep(2000);
-                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("Enter the Id of the task to update: ");
                 if (int.TryParse(Console.ReadLine()!, out int id))
                 {
@@ -23,16 +22,13 @@ namespace TaskManagement.Managers
                     {
                         Action<bool> updateTaskCompletion = isCompleted => taskToUpdate.IsCompleted = isCompleted; // Delegat
 
-                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Is the task completed? (true/false): ");
                         if (bool.TryParse(Console.ReadLine(), out bool isComleted))
                         {
                             Console.WriteLine("Loading...");
                             Thread.Sleep(2000);
                             updateTaskCompletion(isComleted);
-                            Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Task updated successfully.");
-                            Console.ResetColor();
                         }
                         else
                         {
@@ -43,7 +39,7 @@ namespace TaskManagement.Managers
                     }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Task not found.");
                         Console.ResetColor();
                     }

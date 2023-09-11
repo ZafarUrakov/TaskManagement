@@ -23,7 +23,8 @@ namespace TaskManagement.Managers
                     Console.WriteLine($"{loopManager}. ID: {task.Id}, Title: {task.Title}, " +
                         $"DueData: {task.DueDate}, Completed: {task.IsCompleted}");
                 }
-                int numberOfTask = valueManipulator.GetUserValueByMassageForNumber("Enter the task number to open it: ");
+                int numberOfTask = valueManipulator.
+                    GetUserValueByMassageForNumber("Enter the task number to open it: ");
 
                 Local.Task taskDescription = tasks[numberOfTask];
                 Console.WriteLine("Loading...");
