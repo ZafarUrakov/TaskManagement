@@ -16,7 +16,19 @@ namespace TaskManagement.Brokers
         public int GetUserValueByMassageForNumber(string text)
         {
             Console.Write(text);
-            return int.Parse(Console.ReadLine()!);
+            int choice;
+
+            while (!int.TryParse(Console.ReadLine()!, out choice))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid input. Please enter a number.");
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.Write("Please enter your choice: ");
+                Console.ResetColor();
+            }
+
+            return choice;
         }
     }
 }

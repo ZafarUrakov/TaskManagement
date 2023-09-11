@@ -9,14 +9,12 @@ namespace TaskManagement.Brokers
     {
         public int ShowMenu()
         {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("1. View tasks");
             Console.WriteLine("2. Add a task");
             Console.WriteLine("3. Update a task");
             Console.WriteLine("4. Delete a task");
             Console.WriteLine("5. Quit");
             Console.Write("Please enter your choice: ");
-            Console.ResetColor();
 
             int choice;
             while (!int.TryParse(Console.ReadLine()!, out choice))

@@ -15,7 +15,6 @@ namespace TaskManagement.Managers
             Console.Clear();
             Console.WriteLine("Loading...");
             Thread.Sleep(2000);
-            Console.ForegroundColor = ConsoleColor.Cyan;
             task.Id = valueManipulator.GetUserValueByMassageForNumber("Enter task id: ");
             task.Title = valueManipulator.GetUserValueByMassage("Enter task title: ");
             task.Description = valueManipulator.GetUserValueByMassage("Enter task description: ");
@@ -34,9 +33,7 @@ namespace TaskManagement.Managers
             Console.WriteLine("Loading...");
             Thread.Sleep(2000);
             tasks.Add(task);
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Task added successfully.");
-            Console.ResetColor();
         }
     }
 }
