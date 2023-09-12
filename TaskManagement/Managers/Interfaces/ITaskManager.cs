@@ -12,6 +12,5 @@ namespace TaskManagement.Managers.Interfaces
         void AddTask();
         void DeleteTask();
         void UpdateTask();
-
     }
 }
