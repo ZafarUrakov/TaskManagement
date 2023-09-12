@@ -34,3 +34,6 @@ Viewing a list of all tasks with detailed information.
 Updating the completion status of a task.
 Deleting a task from the list.
 
+<img width="886" alt="Screenshot 2023-09-12 at 12 05 40 AM" src="https://github.com/ZafarUrakov/TaskManagement/assets/138094771/4669e081-8cce-4989-9466-afea54b5ce73">
+
+
