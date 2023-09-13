@@ -1,4 +1,4 @@
-# TaskManagement
+ # TaskManagement
 
 ### Introduction
 Task Manager Console App is a console application for task management. With this application, you can view, add, update, and delete tasks. The app provides a simple and convenient way to organize your task list.
@@ -34,12 +34,8 @@ Viewing a list of all tasks with detailed information.
 Updating the completion status of a task.
 Deleting a task from the list.
 
-#### SOLID✅
-#### YAGNI✅
-#### KISS✅
-#### DRY✅
+**DRY✅SOLID✅YAGNI✅KISS✅**
 
-<img width="886" alt="Screenshot 2023-09-12 at 12 05 40 AM" src="https://github.com/ZafarUrakov/TaskManagement/assets/138094771/4669e081-8cce-4989-9466-afea54b5ce73">
-
+<img width="898" alt="Screenshot 2023-09-13 at 2 04 44 AM" src="https://github.com/ZafarUrakov/TaskManagement/assets/138094771/1cab9314-fb34-4c84-a45d-8fd27d265531">
 
 
