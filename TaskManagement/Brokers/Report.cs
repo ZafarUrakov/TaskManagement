@@ -28,5 +28,16 @@ namespace TaskManagement.Brokers
             }
             return choice;
         }
+
+        public void Default()
+        {
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.WriteLine("Invalid input. Please select a valid option.");
+        }
+
+        public void Quit()
+        {
+            Console.WriteLine("Goodbye!");
+        }
     }
 }

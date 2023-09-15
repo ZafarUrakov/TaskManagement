@@ -31,11 +31,10 @@ namespace TaskManagement
                     case 4:
                         taskManager.DeleteTask(); break;
                     case 5:
-                        Console.WriteLine("Goodbye!");
+                        report.Quit();
                         return;
                     default:
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Invalid input. Please select a valid option.");
+                        report.Default();
                         break;
                 }
             }
