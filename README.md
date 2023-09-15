@@ -35,6 +35,7 @@ When choosing this option, you can delete an existing task. You will need to ent
 When choosing this option, the application will terminate its operation.
 
 **Project Features**
+
 Adding tasks with titles, descriptions, and due dates.
 Viewing a list of all tasks with detailed information.
 Updating the completion status of a task.
