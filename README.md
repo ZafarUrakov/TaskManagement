@@ -2,7 +2,7 @@
 
 **Introduction**
 
-Task Manager Console App is a console application for task management. With this application, you can view, add, update, and delete tasks. The app provides a simple and convenient way to organize your task list. This project is a good example for beginners who have just started learning programming. If you are a beginner, copy it, try to wtite something similar to it or better yourself!
+Task Manager is a console application for task management. With this application, you can view, add, update, and delete tasks. The app provides a simple and convenient way to organize your task list. This project is a good example for beginners who have just started learning programming. If you are a beginner, copy it, try to wtite something similar to it or better yourself!
 
 **Main Actions**
 
